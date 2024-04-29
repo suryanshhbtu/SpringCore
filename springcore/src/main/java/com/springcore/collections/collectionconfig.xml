@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan
+		base-package="base.package" />
+	<bean class="com.springcore.collections.Employee"
+		name="Employee_1">
+
+		<property name="name" value="Suryansh"/>
+		<!-- LIST -->
+		<property name="phones">
+			<list>
+				<value>9125224471</value>
+				<value>7007162146</value>
+				<value>9415155877</value>
+				<value>9453965586</value>
+			</list>
+		</property>
+
+		<!-- SET -->
+		<property name="addresses">
+			<set>
+				<value>Ayodhya</value>
+				<value>Lucknow</value>
+				<value>Sultanpur</value>
+				<value>Ayodhya</value>
+				<null/>
+			</set>
+		</property>
+
+
+		<!-- MAP -->
+		<property name="courses">
+			<map>
+				<entry key="Spring" value="3 Months" />
+				<entry key="React" value="2 Months" />
+				<entry key="Hibernate" value="1 Month" />
+			</map>
+		</property>
+		
+		
+		<!-- PROPERTIES -->
+		<property name="props">
+			<props>
+				<prop key="username">suryanshhbtu</prop>
+				<prop key="password">1234</prop>
+			</props>
+		</property>
+	</bean>
+	
+
+</beans>

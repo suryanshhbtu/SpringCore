@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
-    xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
             http://www.springframework.org/schema/context
@@ -23,15 +23,16 @@
 			<value>Srivastava</value>
 		</property>
 	</bean>
-	
+
 	<!-- Method 2 : Value as Attribute -->
 	<bean class="com.springcore.entity.Student" name="Student_2">
 		<property name="id" value="1002" />
 		<property name="firstName" value="Sugandh" />
 		<property name="lastName" value="Srivastava" />
 	</bean>
-	
+
 	<!-- Method 3 : Using p schema -->
-	<bean class="com.springcore.entity.Student" name="Student_3" p:id="1003" p:firstName="Samanvay" p:lastName="Srivastava" />
+	<bean class="com.springcore.entity.Student" name="Student_3"
+		p:id="1003" p:firstName="Samanvay" p:lastName="Srivastava" />
 </beans>
 	
