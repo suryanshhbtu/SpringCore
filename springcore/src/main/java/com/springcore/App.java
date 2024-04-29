@@ -9,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.springcore.collections.Employee;
 import com.springcore.entity.Student;
+import com.springcore.ref.A;
 
 /**
  * Hello world!
@@ -19,9 +20,9 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World !" );
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/springcore/collections/collectionconfig.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/springcore/ref/refconfig.xml");
 
-        Employee ict = (Employee) applicationContext.getBean("Employee_1");
-        System.out.println(ict.toString()); 
+        A a = (A) applicationContext.getBean("aref");
+        System.out.println(a); 
     }
 }
