@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan
+		base-package="base.package" />
+		
+		
+	<bean class="com.springcore.ci.Certificate" name="certi_ref">
+		<constructor-arg name="name" value="Android Using JAVA"/>
+	</bean>
+	
+	
+	<bean class="com.springcore.ci.Person" name="person_1">
+	<!-- Method 1  -->
+		<constructor-arg>
+			<value>Suryansh</value>
+		</constructor-arg>
+		
+	<!-- Method 2  -->
+		<constructor-arg value="19" type="int"/>
+
+	<!-- Method 1 : Referening Inside COnstructor Injection  -->
+		<constructor-arg ref="certi_ref"/>
+	</bean>
+</beans>
+	
