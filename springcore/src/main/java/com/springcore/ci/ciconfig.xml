@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
             http://www.springframework.org/schema/context
@@ -11,24 +12,29 @@
 	<context:annotation-config />
 	<context:component-scan
 		base-package="base.package" />
-		
-		
-	<bean class="com.springcore.ci.Certificate" name="certi_ref">
-		<constructor-arg name="name" value="Android Using JAVA"/>
-	</bean>
-	
-	
-	<bean class="com.springcore.ci.Person" name="person_1">
-	<!-- Method 1  -->
-		<constructor-arg>
-			<value>Suryansh</value>
-		</constructor-arg>
-		
-	<!-- Method 2  -->
-		<constructor-arg value="19" type="int"/>
 
-	<!-- Method 1 : Referening Inside COnstructor Injection  -->
-		<constructor-arg ref="certi_ref"/>
+
+	<bean class="com.springcore.ci.Certificate" name="certi_ref"
+		c:name="Android Using JAVA" />
+	<bean class="com.springcore.ci.Person" name="person_1">
+		<constructor-arg value="Suryansh" />
+		<constructor-arg value="19" type="int" />
+		<constructor-arg ref="certi_ref" />
+		<constructor-arg>
+			<list>
+				<value>a</value>
+				<value>b</value>
+				<value>c</value>
+				<value>d</value>
+			</list>
+		</constructor-arg>
 	</bean>
+	
+	<!-- TYPE, INDEX CUSTOMIZATION  -->
+	<bean class="com.springcore.ci.Addition" name="addition">
+		<constructor-arg value="10" type="int" index="1"/>
+		<constructor-arg value="11" type="int" index="0"/>
+	</bean>
+
 </beans>
 	

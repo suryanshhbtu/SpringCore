@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.springcore.ci.Addition;
 import com.springcore.ci.Person;
 import com.springcore.ref.A;
 
@@ -19,7 +20,9 @@ public class App
         try(ConfigurableApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/springcore/ci/ciconfig.xml")){
         	
         	Person p = (Person) applicationContext.getBean("person_1");
-        	System.out.println(p); 
+        	Addition a = (Addition) applicationContext.getBean("addition");
+        	
+        	System.out.println(a); 
         }catch (Exception e) {
         	e.printStackTrace();
 			// TODO: handle exception
