@@ -22,15 +22,9 @@ public class Pepsi implements InitializingBean, DisposableBean {
 
 	@Override
 	public String toString() {
-		return "Samosa [price=" + price + "]";
+		return "Pepsi [price=" + price + "]";
 	}
 
-	public void hye() {
-		System.out.println("Inside init() Method");
-	}
-	public void bye() {
-		System.out.println("Inside destroy() Method");
-	}
 
 	@Override
 	public void destroy() throws Exception {
