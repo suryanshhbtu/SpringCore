@@ -15,5 +15,9 @@ public class Test {
 		
 		// works only with abstract application context
 		context.registerShutdownHook();
+		System.out.println("|<------------------------>|");
+		Pepsi p1 = (Pepsi) context.getBean("p1");
+		System.out.println(p1);
+		
 	}
 }
