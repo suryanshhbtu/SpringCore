@@ -4,6 +4,12 @@ public class Emp {
 
 	private Address address;
 
+	
+	public Emp() {
+		super();
+		System.out.println("Inside address constructor");
+	}
+
 	public Address getAddress() {
 		return address;
 	}

@@ -22,6 +22,6 @@
 		<property name="locality" value="Alambagh" />
 		<property name="city" value="Lucknow" />
 	</bean>
-	<bean class="com.springcore.autowire.Emp" name="emp" autowire="byType"/>
+	<bean class="com.springcore.autowire.Emp" name="emp" autowire="constructor"/>
 </beans>
 	
