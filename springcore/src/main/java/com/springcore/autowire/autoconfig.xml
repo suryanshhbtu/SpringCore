@@ -11,15 +11,17 @@
 	<context:annotation-config />
 	
 	<!-- bean name must be same as the name of the variable name in which we want to inject ->byName   -->
-	<bean class="com.springcore.autowire.Address" name="address">
+<!-- 	<bean class="com.springcore.autowire.Address" name="address">
 		<property name="locality" value="maqbara" />
 		<property name="city" value="Faizabad" />
 	</bean>
+-->
 	
+	<!-- bean name does not matter, the but only one bean should exist of given type ->byType   -->
 	<bean class="com.springcore.autowire.Address" name="address1">
 		<property name="locality" value="Alambagh" />
 		<property name="city" value="Lucknow" />
 	</bean>
-	<bean class="com.springcore.autowire.Emp" name="emp" autowire="byName"/>
+	<bean class="com.springcore.autowire.Emp" name="emp" autowire="byType"/>
 </beans>
 	
