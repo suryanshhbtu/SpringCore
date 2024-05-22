@@ -9,15 +9,17 @@
             http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<context:annotation-config />
-	<bean class="com.springcore.lifecycle.Samosa" name="s1"
-		init-method="hye" destroy-method="bye">
-		<property name="price" value="10" />
+	
+	<!-- bean name must be same as the name of the variable name in which we want to inject ->byName   -->
+	<bean class="com.springcore.autowire.Address" name="address">
+		<property name="locality" value="maqbara" />
+		<property name="city" value="Faizabad" />
 	</bean>
-	<bean class="com.springcore.lifecycle.Pepsi" name="p1">
-		<property name="price" value="40" />
+	
+	<bean class="com.springcore.autowire.Address" name="address1">
+		<property name="locality" value="Alambagh" />
+		<property name="city" value="Lucknow" />
 	</bean>
-	<bean class="com.springcore.lifecycle.Napkin" name="n1">
-		<property name="price" value="4" />
-	</bean>
+	<bean class="com.springcore.autowire.Emp" name="emp" autowire="byName"/>
 </beans>
 	
