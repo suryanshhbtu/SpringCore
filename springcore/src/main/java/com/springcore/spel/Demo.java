@@ -17,13 +17,17 @@ public class Demo {
 	@Value("#{2<3 ? 44 : 88}")
 	private int y;
 
+	@Value("#{T(java.lang.Math).sqrt(144)}")
+	private double sqrt;
+
+	@Value("#{T(java.lang.Math).PI}")
+	private double pi; // also works with string
+	
+	@Value("#{new String('Suryansh Srivastava')}")
+	private String name;
+
 	private int getX() {
 		return x;
-	}
-
-	@Override
-	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + "]";
 	}
 
 	private void setX(int x) {
@@ -38,12 +42,38 @@ public class Demo {
 		this.y = y;
 	}
 
+	private double getSqrt() {
+		return sqrt;
+	}
+
+	private void setSqrt(double sqrt) {
+		this.sqrt = sqrt;
+	}
+
+	private double getPi() {
+		return pi;
+	}
+
+	private void setPi(double pi) {
+		this.pi = pi;
+	}
+
+	private String getName() {
+		return name;
+	}
+
+	private void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Demo [x=" + x + ", y=" + y + ", sqrt=" + sqrt + ", pi=" + pi + ", name=" + name + "]";
+	}
+
 	public Demo() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	
-	
-	
+	}	
 	
 }
