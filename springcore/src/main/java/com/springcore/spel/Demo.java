@@ -22,9 +22,20 @@ public class Demo {
 
 	@Value("#{T(java.lang.Math).PI}")
 	private double pi; // also works with string
-	
+
 	@Value("#{new String('Suryansh Srivastava')}")
 	private String name;
+	
+	@Value("#{false}")
+	private boolean activate;
+
+	private boolean isActivate() {
+		return activate;
+	}
+
+	private void setActivate(boolean activate) {
+		this.activate = activate;
+	}
 
 	private int getX() {
 		return x;
@@ -68,7 +79,8 @@ public class Demo {
 
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", sqrt=" + sqrt + ", pi=" + pi + ", name=" + name + "]";
+		return "Demo [x=" + x + ", y=" + y + ", sqrt=" + sqrt + ", pi=" + pi + ", name=" + name + ", activate="
+				+ activate + "]";
 	}
 
 	public Demo() {
