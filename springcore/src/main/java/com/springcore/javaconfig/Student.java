@@ -1,9 +1,16 @@
 package com.springcore.javaconfig;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 public class Student {
+
+	private Samosa samosa;
+	
+	
+	public Student(Samosa samosa) {
+		super();
+		this.samosa = samosa;
+	}
 
 	@Value("Suryansh Srivastava")
 	private String name;
@@ -27,13 +34,9 @@ public class Student {
 		this.rollNo = rollNo;
 	}
 
-	public Student() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public String toString() {
+		samosa.display();
 		return "Student [name=" + name + ", rollNo=" + rollNo + "]";
 	}
 	
