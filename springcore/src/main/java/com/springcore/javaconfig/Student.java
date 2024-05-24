@@ -3,7 +3,6 @@ package com.springcore.javaconfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("firstStudent")
 public class Student {
 
 	@Value("Suryansh Srivastava")
