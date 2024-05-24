@@ -11,6 +11,7 @@
 	<context:annotation-config />
 	<context:component-scan
 		base-package="base.package" />
+		
 	<!-- Method 1 : TAGS Declarative Way -->
 	<bean class="com.springcore.entity.Student" name="Student_1">
 		<property name="id">
